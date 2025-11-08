@@ -14,7 +14,7 @@ public class Mascota {
     // Relación con Dueño (muchas mascotas de un dueño)
     private Dueno dueno;
 
-    // Relación 1→1 unidireccional con Microchip (lo que pide el TPI)
+    // Relación 1→1 unidireccional con Microchip
     private Microchip microchip;
 
     public Mascota() {

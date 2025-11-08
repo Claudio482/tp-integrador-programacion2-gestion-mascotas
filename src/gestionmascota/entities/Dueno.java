@@ -15,8 +15,8 @@ public class Dueno {
     private String direccion;
     private boolean eliminado;
 
-    // Relación 1 -> * (opcional para el modelo OO)
-    // No la vamos a persistir directamente ahora
+    // Relación 1 -> * 
+   
     private List<Mascota> mascotas;
 
     public Dueno() {

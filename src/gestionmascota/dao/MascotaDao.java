@@ -11,6 +11,6 @@ public interface MascotaDao extends CrudDao<Mascota> {
     // para búsquedas por nombre (o por especie) desde el menú
     List<Mascota> buscarPorNombre(String nombre, Connection conn) throws SQLException;
 
-    // para después poder listar por dueño
+    // para poder listar por dueño
     List<Mascota> buscarPorDuenoId(Long duenoId, Connection conn) throws SQLException;
 }

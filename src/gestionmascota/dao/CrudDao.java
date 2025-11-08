@@ -17,5 +17,5 @@ public interface CrudDao<T> {
 
     void eliminarLogico(Long id, Connection conn) throws SQLException;
 
-    // Podríamos agregar buscarPorCampo(...) según necesidad
+    
 }

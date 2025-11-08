@@ -124,7 +124,7 @@ public class DuenoDaoMySQL implements DuenoDao {
     }
 
     // ======================
-    // Métodos cómodos (sin pasar Connection)
+    // Métodos  (sin pasar Connection)
     // ======================
 
     public void crear(Dueno d) throws SQLException {

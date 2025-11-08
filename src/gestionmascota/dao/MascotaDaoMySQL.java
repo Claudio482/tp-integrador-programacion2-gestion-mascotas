@@ -160,7 +160,7 @@ public class MascotaDaoMySQL implements MascotaDao {
     }
 
     // ======================
-    // Métodos cómodos (abren su propia conexión)
+    // Métodos (abren su propia conexión)
     // ======================
 
     public void crear(Mascota m) throws SQLException {

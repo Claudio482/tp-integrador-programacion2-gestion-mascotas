@@ -38,7 +38,7 @@ public class MicrochipDaoMySQL implements MicrochipDao {
             "SELECT 1 FROM microchip WHERE codigo = ?";
 
     /* ==========================
-       MÉTODOS CON CONN EXTERNA
+       MÉTODOS CON COM EXTERNA
        ========================== */
 
     @Override
@@ -140,7 +140,7 @@ public class MicrochipDaoMySQL implements MicrochipDao {
     }
 
     /* ==========================
-       MÉTODOS CÓMODOS (abren conn)
+       MÉTODOS  (abren com)
        ========================== */
 
     public void crear(Microchip m) throws SQLException {
