@@ -76,31 +76,31 @@ Microchip: contiene el código identificatorio único y la información de impla
 
 🧾 Estructura de Paquetes
 gestionmascota/
- ├── config/
- │   └── ConeccionBD.java
- ├── entities/
- │   ├── Dueno.java
- │   ├── Mascota.java
- │   └── Microchip.java
- ├── dao/
- │   ├── CrudDao.java
- │   ├── DuenoDao.java
- │   ├── DuenoDaoMySQL.java
- │   ├── MascotaDao.java
- │   ├── MascotaDaoMySQL.java
- │   ├── MicrochipDao.java
- │   └── MicrochipDaoMySQL.java
- ├── service/
- │   ├── DuenoService.java
- │   ├── MascotaService.java
- │   └── ServiceException.java
- └── main/
-     └── AppMain.java
+ config/
+     ConeccionBD.java
+ entities/
+     Dueno.java
+     Mascota.java
+     Microchip.java
+  dao/
+     CrudDao.java
+     DuenoDao.java
+     DuenoDaoMySQL.java
+     MascotaDao.java
+     MascotaDaoMySQL.java
+     MicrochipDao.java
+     MicrochipDaoMySQL.java
+ service/
+     DuenoService.java
+     MascotaService.java
+     ServiceException.java
+  main/
+      AppMain.java
 
 🎮 Menú Principal (Interfaz de Consola)
-====================================
+
       GESTIÓN DE DUEÑOS Y MASCOTAS
-====================================
+
 1) Crear dueño
 2) Listar dueños
 3) Buscar dueño por DNI
