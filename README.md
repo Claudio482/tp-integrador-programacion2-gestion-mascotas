@@ -78,10 +78,12 @@ Microchip: contiene el código identificatorio único y la información de impla
 gestionmascota/
  config/
      ConeccionBD.java
+ 
  entities/
      Dueno.java
      Mascota.java
      Microchip.java
+  
   dao/
      CrudDao.java
      DuenoDao.java
@@ -90,10 +92,12 @@ gestionmascota/
      MascotaDaoMySQL.java
      MicrochipDao.java
      MicrochipDaoMySQL.java
+ 
  service/
      DuenoService.java
      MascotaService.java
      ServiceException.java
+  
   main/
       AppMain.java
 
@@ -130,8 +134,11 @@ Conclusiones Finales
 👥 Autores
 
 Diana Falla (diana.falla.cba@gmail.com) 
+
 Claudio Fiorito (Claudio80.cf@gmail.com) 
+
 Jennifer Franco (jennyfranco31.jf@gmail.com) 
+
 Jonathan Franco (nahuelfranco7@icloud.com)
 
 🎓 Contexto Académico
