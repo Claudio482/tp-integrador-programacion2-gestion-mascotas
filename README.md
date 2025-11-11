@@ -1,16 +1,16 @@
-Trabajo Integrador Final - Programación 2 (Gestión de Mascotas)
+-Trabajo Integrador Final - Programación 2 (Gestión de Mascotas)
 
 Este repositorio contiene el desarrollo del Trabajo Integrador Final (TIF) de la materia Programación 2 de la Tecnicatura Universitaria en Programación (UTN).
 
- Descripción
+- Descripción
 
 El proyecto consiste en el desarrollo de una aplicación de consola en Java que gestiona la relación entre dueños, mascotas y microchips, aplicando los principios de Programación Orientada a Objetos (POO), persistencia de datos con JDBC, y el patrón DAO.
 Además, se implementa control transaccional (commit y rollback) para garantizar la integridad de los datos al registrar una mascota junto con su microchip.
 
 El sistema simula la operatoria básica de una clínica veterinaria, permitiendo registrar dueños, mascotas y microchips de forma estructurada y segura.
 
- Contenido del Repositorio
- Estructura General
+ -Contenido del Repositorio
+ -Estructura General
 
 src/
 Contiene el código fuente completo del proyecto, organizado por paquetes:
@@ -39,7 +39,7 @@ Trabajo_Integrador_Final_Programacion2_.docx: Informe académico con objetivos, 
 README.md
 Este archivo, que documenta el propósito, estructura y detalles del proyecto.
 
- Funcionalidades Principales
+ -Funcionalidades Principales
 
 Alta, búsqueda, listado y baja lógica de dueños.
 
@@ -61,7 +61,7 @@ JDBC	Conexión directa entre Java y MySQL
 NetBeans 21	Entorno de desarrollo integrado
 Git / GitHub	Control de versiones y repositorio remoto
 
- Modelo de Datos
+ -Modelo de Datos
 
 El modelo de datos relacional se compone de tres entidades principales:
 
@@ -74,7 +74,7 @@ Mascota: registra información de la mascota (nombre, especie, raza, fecha de na
 
 Microchip: contiene el código identificatorio único y la información de implantación.
 
-🧾 Estructura de Paquetes
+- Estructura de Paquetes
 gestionmascota/
  
  config/
@@ -114,7 +114,7 @@ gestionmascota/
       
       AppMain.java
 
- Menú Principal (Interfaz de Consola)
+ -Menú Principal (Interfaz de Consola)
 
      GESTION DE DUEÑOS Y MASCOTAS
 
@@ -126,7 +126,7 @@ gestionmascota/
 6) Buscar mascotas por nombre
 0) Salir
 
- Informe Académico
+ -Informe Académico
 
 El informe incluye:
 
@@ -144,13 +144,13 @@ Pruebas de Validación y Ejecución del Programa
 
 Conclusiones Finales
 
- Autores
+ -Autores
 
 Diana Falla (diana.falla.cba@gmail.com) 
 
 Claudio Fiorito (Claudio80.cf@gmail.com) 
 
- Contexto Académico
+ -Contexto Académico
 
 Universidad: Universidad Tecnológica Nacional (UTN)
 
@@ -162,7 +162,7 @@ Docente Titular: Alberto Cortez
 
 Año: 2025
 
- Enlaces
+ -Enlaces
 
 Video Demostrativo (YouTube):
 [Enlace]
