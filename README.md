@@ -154,13 +154,11 @@ Claudio Fiorito (Claudio80.cf@gmail.com)
 
 Universidad: Universidad Tecnológica Nacional (UTN)
 
-Facultad: Regional Rafaela
-
 Carrera: Tecnicatura Universitaria en Programación
 
 Materia: Programación 2
 
-Docente Titular: 
+Docente Titular: Alberto Cortez
 
 Año: 2025
 
