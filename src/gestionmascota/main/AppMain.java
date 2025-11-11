@@ -30,6 +30,7 @@ public class AppMain {
             System.out.println("4) Crear mascota + microchip");
             System.out.println("5) Listar mascotas");
             System.out.println("6) Buscar mascotas por nombre");
+            System.out.println("7) Eliminar mascota (baja logica)");
             System.out.println("0) Salir");
             System.out.print("Opcion: ");
             opcion = leerEntero(sc);
@@ -41,6 +42,7 @@ public class AppMain {
                 case 4 -> crearMascotaConMicrochip(sc, mascotaService);
                 case 5 -> listarMascotas(mascotaService);
                 case 6 -> buscarMascotasPorNombre(sc, mascotaService);
+                case 7 -> eliminarMascota(sc, mascotaService);
                 case 0 -> System.out.println("Saliendo...");
                 default -> System.out.println("Opción no válida");
             }
@@ -143,7 +145,7 @@ public class AppMain {
             System.out.print("Raza (puede quedar vacia): ");
             String raza = sc.nextLine();
 
-            // Para no complicar, ponemos una fecha de nacimiento fija o de ejemplo
+            // Colocamos una fecha de nacimiento fija 
             LocalDate fechaNac = LocalDate.now().minusYears(1);
 
             System.out.print("ID del dueño (use opcion 2 para ver IDs): ");
@@ -229,7 +231,19 @@ public class AppMain {
             System.out.println(" Error al buscar mascotas: " + e.getMessage());
         }
     }
+   private static void eliminarMascota(Scanner sc, MascotaService mascotaService) {
+    System.out.println("---- Eliminar mascota ----");
+    System.out.print("Ingrese ID de la mascota a eliminar: ");
+    long id = leerLong(sc);
 
+    try {
+        mascotaService.eliminarMascotaYMicrochip(id);
+        System.out.println(" Mascota eliminada logicamente.");
+        System.out.println("   (Si tenia microchip, tambien se marco como eliminado).");
+    } catch (ServiceException e) {
+        System.out.println(" Error: " + e.getMessage());
+    }
+}
     // =========================================
     // MÉTODOS AUXILIARES DE LECTURA
     // =========================================

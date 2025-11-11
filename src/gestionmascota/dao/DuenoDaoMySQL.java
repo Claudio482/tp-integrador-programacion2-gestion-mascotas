@@ -36,7 +36,7 @@ public class DuenoDaoMySQL implements DuenoDao {
             "FROM duenio WHERE dni = ?";
 
     // ======================
-    // Métodos con Connection EXTERNA
+    // Métodos con Conecion EXTERNA
     // ======================
 
     @Override
@@ -124,7 +124,7 @@ public class DuenoDaoMySQL implements DuenoDao {
     }
 
     // ======================
-    // Métodos  (sin pasar Connection)
+    // Métodos  (sin pasar Conec)
     // ======================
 
     public void crear(Dueno d) throws SQLException {
@@ -164,7 +164,7 @@ public class DuenoDaoMySQL implements DuenoDao {
     }
 
     // ======================
-    // Helper para mapear ResultSet -> Dueno
+    //  para mapear ResultSet -> Dueno
     // ======================
     private Dueno mapRow(ResultSet rs) throws SQLException {
         Dueno d = new Dueno();

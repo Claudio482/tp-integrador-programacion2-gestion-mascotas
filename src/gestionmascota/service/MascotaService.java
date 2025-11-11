@@ -23,8 +23,8 @@ public class MascotaService {
     }
 
     /**
-     * Crea una mascota y, si viene con microchip cargado, también lo crea.
-     * TODO en una sola transacción.
+     * Crea mascota y microchip
+     * Todo en una sola transacción
      */
     public void crearMascotaConMicrochip(Mascota mascota) throws ServiceException {
         // validaciones mínimas de negocio
@@ -41,9 +41,9 @@ public class MascotaService {
             conn.setAutoCommit(false); // ---- INICIO TRANSACCIÓN ----
 
             // 1) Crear la mascota primero
-            mascotaDao.crear(mascota, conn); // esto le setea el ID generado
+            mascotaDao.crear(mascota, conn); // esto  setea el ID generado
 
-            // 2) Si vino un microchip, lo creamos
+            // 2) Si vino un microchip lo creamos
             Microchip microchip = mascota.getMicrochip();
             if (microchip != null) {
 
@@ -67,7 +67,7 @@ public class MascotaService {
                 try {
                     conn.rollback();
                 } catch (SQLException ex) {
-                    // lo registrás en consola
+                    // lo registr en consola
                     ex.printStackTrace();
                 }
             }
@@ -97,7 +97,7 @@ public class MascotaService {
         }
     }
 
-    // CRUD "simples" que el menú va a usar
+    // CRUD  para menu
 
     public Mascota obtenerPorId(Long id) throws ServiceException {
         try (Connection conn = ConeccionBD.getConnection()) {
@@ -142,4 +142,44 @@ public class MascotaService {
             throw new ServiceException("Error al eliminar lógicamente la mascota", e);
         }
     }
+    
+   public void eliminarMascotaYMicrochip(Long mascotaId) throws ServiceException {
+    if (mascotaId == null) {
+        throw new ServiceException("Debe indicar el ID de la mascota a eliminar.");
+    }
+
+    try (Connection conn = ConeccionBD.getConnection()) {
+        conn.setAutoCommit(false);
+        try {
+            // 1) Verificamos que la mascota exista
+            Mascota mascota = mascotaDao.buscarPorId(mascotaId, conn);
+            if (mascota == null) {
+                throw new ServiceException("No existe una mascota con ID " + mascotaId);
+            }
+
+            // 2) Baja lógica del microchip asociado (si hay)
+            microchipDao.eliminarLogicoPorMascotaId(mascotaId, conn);
+
+            // 3) Baja lógica de la mascota
+            mascotaDao.eliminarLogico(mascotaId, conn);
+
+            // 4) Todo OK  commit
+            conn.commit();
+
+        } catch (SQLException | ServiceException ex) {
+            conn.rollback(); // deshacemos todo
+            if (ex instanceof ServiceException se) {
+                throw se;
+            }
+            throw new ServiceException("Error al eliminar mascota y microchip.", ex);
+        }
+    } catch (SQLException e) {
+        throw new ServiceException("Error al conectar con la base para eliminar mascota.", e);
+    }
+} 
+    
+    
+    
+    
+    
 }

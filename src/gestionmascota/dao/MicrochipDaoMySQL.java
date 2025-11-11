@@ -156,7 +156,7 @@ public class MicrochipDaoMySQL implements MicrochipDao {
     }
 
     /* ==========================
-       Helper
+       para mapear
        ========================== */
     private Microchip mapRow(ResultSet rs) throws SQLException {
         Microchip m = new Microchip();
@@ -172,4 +172,23 @@ public class MicrochipDaoMySQL implements MicrochipDao {
         m.setMascotaId(rs.getLong("mascota_id"));
         return m;
     }
+    
+private static final String DELETE_LOGICO_POR_MASCOTA_SQL =
+        "UPDATE microchip SET eliminado = TRUE WHERE mascota_id = ?";
+
+@Override
+public void eliminarLogicoPorMascotaId(Long mascotaId, Connection conn) throws SQLException {
+    try (PreparedStatement ps = conn.prepareStatement(DELETE_LOGICO_POR_MASCOTA_SQL)) {
+        ps.setLong(1, mascotaId);
+        ps.executeUpdate();
+    }
+}
+
+// método sin pasar Connection (opcional)
+public void eliminarLogicoPorMascotaId(Long mascotaId) throws SQLException {
+    try (Connection conn = ConeccionBD.getConnection()) {
+        eliminarLogicoPorMascotaId(mascotaId, conn);
+    }
+}      
+    
 }

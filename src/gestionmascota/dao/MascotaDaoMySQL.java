@@ -42,7 +42,7 @@ public class MascotaDaoMySQL implements MascotaDao {
             "FROM mascota WHERE duenio_id = ?";
 
     // ======================
-    // Métodos con Connection EXTERNA
+    // Métodos con Conecion EXTERNA
     // ======================
 
     @Override
@@ -194,7 +194,7 @@ public class MascotaDaoMySQL implements MascotaDao {
     }
 
     // ======================
-    // Helper para mapear
+    //  para mapear
     // ======================
     private Mascota mapRow(ResultSet rs) throws SQLException {
         Mascota m = new Mascota();
