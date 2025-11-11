@@ -1,4 +1,4 @@
--Trabajo Integrador Final - Programación 2 (Gestión de Mascotas)
+- Trabajo Integrador Final - Programación 2 (Gestión de Mascotas)
 
 Este repositorio contiene el desarrollo del Trabajo Integrador Final (TIF) de la materia Programación 2 de la Tecnicatura Universitaria en Programación (UTN).
 
@@ -9,8 +9,8 @@ Además, se implementa control transaccional (commit y rollback) para garantizar
 
 El sistema simula la operatoria básica de una clínica veterinaria, permitiendo registrar dueños, mascotas y microchips de forma estructurada y segura.
 
- -Contenido del Repositorio
- -Estructura General
+ - Contenido del Repositorio
+   Estructura General
 
 src/
 Contiene el código fuente completo del proyecto, organizado por paquetes:
@@ -26,7 +26,7 @@ gestionmascota.service: Lógica de negocio, validaciones y control de transaccio
 gestionmascota.main: Clase principal con menú de consola interactivo.
 
 sql/
-Contiene los scripts SQL necesarios para crear y probar la base de datos:
+- Contiene los scripts SQL necesarios para crear y probar la base de datos:
 
 gestion_mascota.sql: Creación de la base de datos gestion_mascota, tablas, claves foráneas y restricciones.
 
@@ -53,7 +53,7 @@ Persistencia mediante JDBC con MySQL.
 
 Interfaz por consola con menú interactivo.
 
- Tecnologías Utilizadas
+ - Tecnologías Utilizadas
 Tecnología	Descripción
 Java 	Lenguaje de programación principal
 MySQL 8	Motor de base de datos relacional
@@ -61,7 +61,7 @@ JDBC	Conexión directa entre Java y MySQL
 NetBeans 21	Entorno de desarrollo integrado
 Git / GitHub	Control de versiones y repositorio remoto
 
- -Modelo de Datos
+ - Modelo de Datos
 
 El modelo de datos relacional se compone de tres entidades principales:
 
@@ -114,7 +114,7 @@ gestionmascota/
       
       AppMain.java
 
- -Menú Principal (Interfaz de Consola)
+ - Menú Principal (Interfaz de Consola)
 
      GESTION DE DUEÑOS Y MASCOTAS
 
@@ -126,7 +126,7 @@ gestionmascota/
 6) Buscar mascotas por nombre
 0) Salir
 
- -Informe Académico
+ - Informe Académico
 
 El informe incluye:
 
@@ -144,13 +144,13 @@ Pruebas de Validación y Ejecución del Programa
 
 Conclusiones Finales
 
- -Autores
+ - Autores
 
 Diana Falla (diana.falla.cba@gmail.com) 
 
 Claudio Fiorito (Claudio80.cf@gmail.com) 
 
- -Contexto Académico
+ - Contexto Académico
 
 Universidad: Universidad Tecnológica Nacional (UTN)
 
@@ -162,7 +162,7 @@ Docente Titular: Alberto Cortez
 
 Año: 2025
 
- -Enlaces
+ - Enlaces
 
 Video Demostrativo (YouTube):
 [Enlace]
