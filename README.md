@@ -28,13 +28,13 @@ gestionmascota.main: Clase principal con menú de consola interactivo.
 sql/
 Contiene los scripts SQL necesarios para crear y probar la base de datos:
 
-01_creacion.sql: Creación de la base de datos gestion_mascota, tablas, claves foráneas y restricciones.
+gestion_mascota.sql: Creación de la base de datos gestion_mascota, tablas, claves foráneas y restricciones.
 
 02_datos_prueba.sql: Inserción de registros iniciales (dueños y mascotas de prueba).
 
 informe/
 
-Trabajo_Integrador_Final_Programacion2_FormatoAcademico.docx: Informe académico con objetivos, arquitectura, modelo de datos, transacciones, conclusiones y bibliografía.
+Trabajo_Integrador_Final_Programacion2_.docx: Informe académico con objetivos, arquitectura, modelo de datos, transacciones, conclusiones.
 
 README.md
 Este archivo, que documenta el propósito, estructura y detalles del proyecto.
@@ -56,7 +56,7 @@ Interfaz por consola con menú interactivo.
 ⚙️ Tecnologías Utilizadas
 Tecnología	Descripción
 Java 	Lenguaje de programación principal
-MySQL 8.x	Motor de base de datos relacional
+MySQL 8	Motor de base de datos relacional
 JDBC	Conexión directa entre Java y MySQL
 NetBeans 21	Entorno de desarrollo integrado
 Git / GitHub	Control de versiones y repositorio remoto
@@ -149,10 +149,6 @@ Conclusiones Finales
 Diana Falla (diana.falla.cba@gmail.com) 
 
 Claudio Fiorito (Claudio80.cf@gmail.com) 
-
-Jennifer Franco (jennyfranco31.jf@gmail.com) 
-
-Jonathan Franco (nahuelfranco7@icloud.com)
 
 🎓 Contexto Académico
 
