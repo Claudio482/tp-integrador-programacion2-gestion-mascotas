@@ -4,7 +4,7 @@
    Modelo: Dueño (independiente) -> Mascota (A) -> Microchip (B 1:1)
    =============================================================== */
 
--- FASE 1: Crear base de datos (idempotente)
+-- FASE 1: Crear base de datos 
 CREATE DATABASE IF NOT EXISTS gestion_mascota
   DEFAULT CHARACTER SET utf8mb4
   DEFAULT COLLATE utf8mb4_unicode_ci;
@@ -42,7 +42,7 @@ CREATE TABLE duenio (
 
 -- Comentario:
 --  - Esta tabla NO depende de nadie.
---  - dni único para búsquedas por campo clave (lo pide la cátedra).
+--  - dni único para búsquedas por campo clave .
 --  - eliminado = baja lógica (no se borra físicamente).
 
 
@@ -71,10 +71,7 @@ CREATE TABLE mascota (
     CONSTRAINT chk_mascota_nombre CHECK (TRIM(nombre) <> '')
 );
 
--- Comentario:
 --  - ON DELETE RESTRICT: no puedo borrar un dueño si tiene mascotas.
---  - Esto es muy defendible en el informe.
-
 
 -- ===============================================================
 -- FASE 5: Tabla MICROCHIP (Clase B)
@@ -88,7 +85,7 @@ CREATE TABLE microchip (
     codigo VARCHAR(25) NOT NULL UNIQUE,
     observaciones TEXT,
     veterinaria VARCHAR(120),
-    fecha_implantacion DATE,          -- >>> este es el campo que faltaba <<<
+    fecha_implantacion DATE,         
     mascota_id BIGINT NOT NULL UNIQUE, -- UNIQUE = una sola B por cada A
 
     -- Relaciones
@@ -103,7 +100,7 @@ CREATE TABLE microchip (
 );
 
 -- Comentario:
---  - UNIQUE(mascota_id) = exactamente lo que pide el TPI para 1→1. 
+--  - UNIQUE(mascota_id) = 1 a 1. 
 --  - ON DELETE CASCADE: si (en una prueba) se borra físicamente la mascota,
 --    no queda un microchip "huérfano".
---  - fecha_implantacion DATE: igual que en las pautas oficiales.
+--  - fecha_implantacion DATE
