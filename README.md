@@ -1,5 +1,7 @@
 - Trabajo Integrador Final - Programación 2 (Gestión de Mascotas)
 
+Video  (YouTube):https://www.youtube.com/watch?v=ZNZp6vacQ2E 
+
 Este repositorio contiene el desarrollo del Trabajo Integrador Final (TIF) de la materia Programación 2 de la Tecnicatura Universitaria en Programación (UTN).
 
 - Descripción
@@ -161,11 +163,6 @@ Materia: Programación 2
 Docente Titular: Alberto Cortez
 
 Año: 2025
-
- - Enlaces
-
-Video Demostrativo (YouTube):
-[Enlace]
 
 Software Utilizado:
 
